@@ -1,0 +1,11 @@
+test:
+  image: 823193265824.dkr.ecr.us-east-1.amazonaws.com/knowbe4/gitlab-builder:terraform-0.12
+  only:
+    - merge_requests
+  stage: test
+  tags:
+    - linux
+    - docker
+    - tests
+  script:
+    - make test
